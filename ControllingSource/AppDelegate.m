@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "MasterViewController.h"
+#import "QuotesListViewController.h"
 
 @implementation AppDelegate
 
@@ -19,8 +19,10 @@
 {
     // Override point for customization after application launch.
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-    MasterViewController *controller = (MasterViewController *)navigationController.topViewController;
+    QuotesListViewController *controller = (QuotesListViewController *)navigationController.topViewController;
     controller.managedObjectContext = self.managedObjectContext;
+    
+    NSLog(@"Test Merging");
     
     return YES;
 }
@@ -28,6 +30,7 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
+    
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 
